@@ -3,6 +3,7 @@ package com.enjaymobile.jetpackapp
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
@@ -22,7 +23,7 @@ class ListActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    CreateListLayout("Android")
+                    myapp()
                 }
             }
         }
@@ -32,7 +33,16 @@ class ListActivity : ComponentActivity() {
 @Composable
 fun CreateListLayout(name: String) {
     Surface(color = MaterialTheme.colors.primary) {
-        Text (text = "Hello $name!")
+        Text(text = "Hello $name!")
+    }
+}
+
+@Composable
+fun myapp(names: List<String> = listOf("World", "Jetpack", "Getlost")) {
+    Column {
+        for (name in names) {
+            CreateListLayout(name)
+        }
     }
 }
 
@@ -40,6 +50,6 @@ fun CreateListLayout(name: String) {
 @Composable
 fun ListLayoutPreview() {
     JetpackAppTheme {
-        CreateListLayout("Android")
+        myapp()
     }
 }
