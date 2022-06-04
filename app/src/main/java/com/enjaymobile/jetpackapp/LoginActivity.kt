@@ -53,7 +53,7 @@ class LoginActivity : ComponentActivity() {
     }
 }
 
-@Preview(showBackground = true,uiMode = UI_MODE_NIGHT_YES)
+@Preview(showBackground = true, uiMode = UI_MODE_NIGHT_YES)
 @Composable
 fun DefaultPreview() {
     CreateLayout()
@@ -208,9 +208,13 @@ fun CreateLayout() {
 }
 
 fun loginClickAction(context: Context) {
-    Log.e("Asmita==>", " context = $context")
-    val intent = Intent(context, ListActivity::class.java)
-    startActivity(context, intent, null)
+    try {
+        val intent : Intent = Intent(context, MainActivity::class.java)
+        startActivity(context, intent, null)
+    } catch (e: Exception) {
+        Log.e("Asmita==>", " context ="+ e.getStackTrace()[0].getLineNumber())
+    }
+
 }
 
 fun signUpClickAction(context: Context) {

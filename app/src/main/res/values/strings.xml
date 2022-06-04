@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">JetpackApp</string>
+    <string name="app_name">Shop My Taste</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_register">RegisterActivity</string>
     <string name="title_activity_list">ListActivity</string>

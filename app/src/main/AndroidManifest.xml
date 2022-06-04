@@ -10,16 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JetpackApp">
         <activity
-            android:name=".ListActivity"
-            android:exported="false"
-            android:label="@string/title_activity_list"
-            android:theme="@style/Theme.JetpackApp" />
-        <activity
-            android:name=".RegisterActivity"
-            android:exported="false"
-            android:label="@string/title_activity_register"
-            android:theme="@style/Theme.JetpackApp" />
-        <activity
             android:name=".LoginActivity"
             android:exported="true"
             android:label="Login"
@@ -29,6 +19,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ListActivity"
+            android:exported="false"
+            android:label="@string/title_activity_list"
+            android:theme="@style/Theme.JetpackApp" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false"
+            android:label="@string/title_activity_register"
+            android:theme="@style/Theme.JetpackApp" />
         <activity
             android:name=".MainActivity"
             android:exported="false"

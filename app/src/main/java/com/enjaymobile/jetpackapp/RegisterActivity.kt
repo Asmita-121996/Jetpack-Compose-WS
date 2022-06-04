@@ -102,11 +102,9 @@ fun CreateRegisterLayout() {
                 when {
                     username.value.text.isEmpty() -> {
 
-                    }
-                    else -> {
+                    }else -> {
 
                     }
-
                 }
             },
             label = {
@@ -239,7 +237,7 @@ fun registerClickAction(context: Context) {
 
 @Preview(showBackground = true)
 @Composable
-fun DefaultPreview3() {
+fun DefaultPreview1() {
     JetpackAppTheme {
         CreateRegisterLayout()
     }
